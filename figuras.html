@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<title>Figuras geometricas</title>
+</head>
+<body>
+	<header>
+		<img src="./assets/logo.svg" alt="">
+		<h1>Figuras geometricas</h1>
+	</header>
+	<h2 class="sub-titulo">Calcular el área y perimetro de</h2>
+	<section class="figuras">
+		<form action="" class="figuras-card">
+			<h3>Triangulo</h3>
+			<img src="./assets/triangulo-guia.svg" alt="">
+			<label for="triangulo-lado1">Escribe el:</label>
+			<div class="container-inputs">
+				<input id="triangulo-lado1" type="number" placeholder="lado 1">
+				<input id="triangulo-lado2" type="number" placeholder="lado 2">
+				<input id="triangulo-base" type="number" placeholder="base">
+				<input id="triangulo-altura" type="number" placeholder="altura">
+			</div>
+			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroTriangulo()">Hallar perimetro</button>
+			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerAreaTriangulo()">Hallar área</button>
+			<p id="resultado-p-triangulo" class="figuras-card__resultado">perimetro: ... area: .....</p>
+		</form>
+		<form action="" class="figuras-card">
+			<h3>circulo</h3>
+			<img class="otras-figuras" src="./assets/circulo.png" alt="">
+			<label for="radio-circulo">Escribe el:</label>
+			<div class="container-inputs">
+				<input class="input-one" id="radio-circulo" type="number" placeholder="Radio">
+			</div>
+			<button type="button" class="figuras-card__button" onclick="ObtenerPerimetroCirculo()">Hallar perimetro</button>
+			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerArea()">Hallar área</button>
+			<p id="resultado-p-circulo" class="figuras-card__resultado">perimetro: ... area: .....</p>
+		</form>
+		<form action="" class="figuras-card">
+			<h3>cuadrado</h3>
+			<img class="otras-figuras" src="./assets/cuadrado.png" alt="">
+			<label for="radio-cuadrado">Escribe el:</label>
+			<div class="container-inputs">
+				<input class="input-one" id="radio-cuadrado" type="number" placeholder="Radio">
+			</div>
+			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroCuadrado()">Hallar perimetro</button>
+			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerAreaCuadrado()">Hallar área</button>
+			<p id="resultado-p-cuadrado" class="figuras-card__resultado">perimetro: ... area: .....</p>
+		</form>
+	</section>
+	<script src="./figuras.js"></script>
+</body>
+</html>
