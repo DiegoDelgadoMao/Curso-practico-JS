@@ -14,8 +14,8 @@ body {
 }
 
 .sub-titulo {
-  font-size: 1.7rem;
-  width: 150px;
+  font-size: 1.6rem;
+  width: 24rem;
   color: #EBE6D1;
   text-transform: uppercase;
   font-weight: 300;
@@ -62,7 +62,7 @@ header h1 {
   width: 20rem;
 }
 .figuras .figuras-card .otras-figuras {
-  width: 14rem;
+  width: 12rem;
 }
 .figuras .figuras-card label {
   align-self: flex-start;
@@ -143,9 +143,25 @@ h3 {
 
   .figuras {
     width: 90%;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
+    height: 54rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .figuras .container-inputs {
+    width: 80%;
+  }
+
+  .figuras .figuras-card .container-inputs input {
+    width: 6rem;
+  }
+
+  .figuras .figuras-card .container-inputs .input-one {
+    width: 6rem;
+  }
+
+  .figuras .figuras-card img {
+    width: 18rem;
   }
 }
 

@@ -74,3 +74,27 @@ const obtenerArea = ()=>{
 	resultadoHtml.textContent = `El área es: ${resultado}cm^2`;
 }
 const areaCirculo = radio=> ((radio * radio) * PI);
+
+// ISOCELES
+
+const calcularAlturaIsoceles = (lado1,lado2,base) =>{
+	baseMitad = base / 2;
+	potenciaLado1 = lado1**2;
+	potenciaBase = baseMitad**2;
+	const RaizCuadrada = Math.sqrt(potenciaLado1 - potenciaBase);
+	return RaizCuadrada;
+}
+
+let obtenerAlturaIsoceles = () =>{
+	let datoLado1 = Number(document.getElementById('isoceles-lado1').value);
+	let datoLado2 = Number(document.getElementById('isoceles-lado2').value);
+	let datoBase = Number(document.getElementById('isoceles-base').value);
+
+	let contenedorResultado = document.getElementById('resultado-p-isoceles');
+	if(datoLado1 !== datoLado2){
+		contenedorResultado.textContent = `Los lados del isoceles deben coincidir`
+	}else{
+		let resultado = calcularAlturaIsoceles(datoLado1,datoLado2,datoBase);
+		contenedorResultado.textContent = `La altura es: ${resultado}`;
+	}
+}

@@ -13,12 +13,12 @@
 <body>
 	<header>
 		<img src="./assets/logo.svg" alt="">
-		<h1>Figuras geometricas</h1>
+		<h1>Figuras geométricas</h1>
 	</header>
-	<h2 class="sub-titulo">Calcular el área y perimetro de</h2>
+	<h2 class="sub-titulo">Calcular el área,perímetro o altura de un:</h2>
 	<section class="figuras">
 		<form action="" class="figuras-card">
-			<h3>Triangulo</h3>
+			<h3>Triángulo</h3>
 			<img src="./assets/triangulo-guia.svg" alt="">
 			<label for="triangulo-lado1">Escribe el:</label>
 			<div class="container-inputs">
@@ -27,9 +27,9 @@
 				<input id="triangulo-base" type="number" placeholder="base">
 				<input id="triangulo-altura" type="number" placeholder="altura">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroTriangulo()">Hallar perimetro</button>
+			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroTriangulo()">Hallar perímetro</button>
 			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerAreaTriangulo()">Hallar área</button>
-			<p id="resultado-p-triangulo" class="figuras-card__resultado">perimetro: ... area: .....</p>
+			<p id="resultado-p-triangulo" class="figuras-card__resultado">perímetro: ... area: .....</p>
 		</form>
 		<form action="" class="figuras-card">
 			<h3>circulo</h3>
@@ -38,9 +38,9 @@
 			<div class="container-inputs">
 				<input class="input-one" id="radio-circulo" type="number" placeholder="Radio">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="ObtenerPerimetroCirculo()">Hallar perimetro</button>
+			<button type="button" class="figuras-card__button" onclick="ObtenerPerimetroCirculo()">Hallar perímetro</button>
 			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerArea()">Hallar área</button>
-			<p id="resultado-p-circulo" class="figuras-card__resultado">perimetro: ... area: .....</p>
+			<p id="resultado-p-circulo" class="figuras-card__resultado">perímetro: ... area: .....</p>
 		</form>
 		<form action="" class="figuras-card">
 			<h3>cuadrado</h3>
@@ -49,9 +49,21 @@
 			<div class="container-inputs">
 				<input class="input-one" id="radio-cuadrado" type="number" placeholder="Radio">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroCuadrado()">Hallar perimetro</button>
+			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroCuadrado()">Hallar perímetro</button>
 			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerAreaCuadrado()">Hallar área</button>
-			<p id="resultado-p-cuadrado" class="figuras-card__resultado">perimetro: ... area: .....</p>
+			<p id="resultado-p-cuadrado" class="figuras-card__resultado">perímetro: ... area: .....</p>
+		</form>
+		<form action="" class="figuras-card">
+			<h3>Triángulo Isósceles</h3>
+			<img src="./assets/isoceles-guia.svg" alt="">
+			<label for="isoceles-lado1">Escribe el:</label>
+			<div class="container-inputs">
+				<input id="isoceles-lado1" type="number" placeholder="lado 1">
+				<input id="isoceles-lado2" type="number" placeholder="lado 2">
+				<input id="isoceles-base" type="number" placeholder="base">
+			</div>
+			<button type="button" class="figuras-card__button" onclick="obtenerAlturaIsoceles()">Hallar altura</button>
+			<p id="resultado-p-isoceles" class="figuras-card__resultado">perímetro: ... area: .....</p>
 		</form>
 	</section>
 	<script src="./figuras.js"></script>
