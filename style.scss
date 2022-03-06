@@ -30,7 +30,7 @@ header{
 	justify-content: space-evenly;
 	align-items: center;
 	img{
-		width: 8rem;
+		width: 12rem;
 	}
 	h1{
 		font-size: 2rem;
@@ -47,9 +47,10 @@ header{
 	justify-content: center;
 	gap: 3rem;
 	.figuras-card{
-		border-radius: 12px;
+		border-radius: 14px;
 		padding: 20px 0px;
-		box-shadow: 2px 2px 12px #0000008c, -2px -2px 12px #ffffff3d;
+		background: linear-gradient(225deg, #2E303F, #3C468B);
+		box-shadow: 2px 2px 14px #00000063;
 		height: 50rem;
 		display: flex;
 		flex-direction: column;
@@ -57,6 +58,9 @@ header{
 		align-items: center;
 		img{
 			width: 20rem;
+		}
+		.isosceles{
+			width: 16rem;
 		}
 		.otras-figuras{
 			width: 12rem;
@@ -75,14 +79,15 @@ header{
 			input{
 				width: 5rem;
 				height: 3rem;
-				background: #bcbcbc;
+				background: #4D4F65;
 				border: none;
 				border-radius: 4px;
 				font-size: 1.2rem;
 				padding: 0px 4px;
+				color: #fff;
 			}
 			input::placeholder{
-				color: #000;
+				color: #fff;
 			}
 			.input-one{
 				display: block;
@@ -91,39 +96,27 @@ header{
 				height: 30px;
 			}
 		}
-		.figuras-card__button{
-			display: block;
-			width: 15rem;
-			height: 4rem;
-			background: $color-secundario;
-			border: none;
-			border-radius: 16px;
-			font-size: 1.1rem;
-			font-weight: 900;
-			text-transform: uppercase;
-			cursor: pointer;
-			transform: scale(1);
-			transition-property: transform;
-			transition-duration: 2s;
-		}
-		.figuras-card__button:hover{
-			transform: scale(1.1);
-			transition-property: transform;
-			transition-duration: 2s;
-		}
-		.figuras-card__button--mod{
-			background-color: $color-tercero;
-		}
 		.figuras-card__resultado{
 			width: 80%;
-			height: autou;
-			margin: auto;
-			font-size: 1.3rem;
-			font-weight: 600px;
-			text-transform: uppercase;
-			text-align: center;
-			color: $color-cuarto;
-			margin: 0;
+			height: 90px;
+			overflow-y: auto;
+			overflow-wrap: anywhere;
+			background: #4d4f65;
+			border-radius: 12px;
+			padding: 10px 0px;
+			display: grid;
+			place-items: center;
+			span{
+				font-weight: 900;
+				color: $color-secundario;
+			}
+			p{
+				width: 90%;
+				color: $color-cuarto;
+				font-size: 1.3rem;
+				font-weight: 700px;
+				text-transform: uppercase;
+			}
 		}
 	}
 }
@@ -131,6 +124,80 @@ h3{
 	font-weight: 400;
 	color: #fff;
 	font-size: 1.6rem;
+}
+
+.seccion-descuento{
+	width: 100%;
+	height: auto;
+	padding: 20px 0px;
+	form{
+		width: 90%;
+		max-width: 40rem;
+		margin: auto;
+		height: 32rem;
+		background: linear-gradient(235deg, #63948C, #4CA798 );
+		border-radius: 20px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		img{
+			position: absolute;
+			right: 0;
+			width: 7rem;
+			top: 0;
+		}
+		.descuento-etiqueta-p{
+			position: absolute;
+			top: 30px;
+			right: 8px;
+			font-size: 2rem;
+			font-weight: 900;
+			color: #4d4f65;
+			transform: rotate(60deg);
+		}
+		.container-precio{
+			label{
+				display: block;
+				font-size: 1.7rem;
+				font-weight: 300;
+				color: #fff;
+			}
+			input{
+				width: 200px;
+				height: 2.6rem;
+				border: none;
+				background: #4d4f65;
+				margin: 12px 0px;
+				color: #fff;
+				padding: 0px 10px;
+			}
+			input::placeholder{
+				color: #fff;
+				padding: 0px 10px;
+			}
+		}
+		.container-descuento{
+			@extend .container-precio;
+		}
+		.contenedor-resultado-descuento{
+			width: 20rem;
+			height: 8rem;
+			background: #4d4f65;
+			padding: 0px 14px;
+			p{
+				font-size: 1.4rem;
+				color: $color-cuarto;
+				font-weight: 300;
+			}
+			span{
+				color: $color-cuarto;
+				font-size: 1.5rem;
+				font-weight: 900;
+			}
+		}
+	}
 }
 
 /* media queries */
@@ -143,7 +210,7 @@ h3{
 		width: 90%;
 		max-width: 1200px;
 		margin: auto;
-		height: 54rem;
+		height: auto;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		.container-inputs{
 			width: 80%;

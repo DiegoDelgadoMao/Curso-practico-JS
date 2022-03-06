@@ -31,7 +31,7 @@ header {
   align-items: center;
 }
 header img {
-  width: 8rem;
+  width: 12rem;
 }
 header h1 {
   font-size: 2rem;
@@ -49,9 +49,10 @@ header h1 {
   gap: 3rem;
 }
 .figuras .figuras-card {
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 20px 0px;
-  box-shadow: 2px 2px 12px #0000008c, -2px -2px 12px #ffffff3d;
+  background: linear-gradient(225deg, #2E303F, #3C468B);
+  box-shadow: 2px 2px 14px #00000063;
   height: 50rem;
   display: flex;
   flex-direction: column;
@@ -60,6 +61,9 @@ header h1 {
 }
 .figuras .figuras-card img {
   width: 20rem;
+}
+.figuras .figuras-card .isosceles {
+  width: 16rem;
 }
 .figuras .figuras-card .otras-figuras {
   width: 12rem;
@@ -79,14 +83,15 @@ header h1 {
 .figuras .figuras-card .container-inputs input {
   width: 5rem;
   height: 3rem;
-  background: #bcbcbc;
+  background: #4D4F65;
   border: none;
   border-radius: 4px;
   font-size: 1.2rem;
   padding: 0px 4px;
+  color: #fff;
 }
 .figuras .figuras-card .container-inputs input::placeholder {
-  color: #000;
+  color: #fff;
 }
 .figuras .figuras-card .container-inputs .input-one {
   display: block;
@@ -94,45 +99,102 @@ header h1 {
   margin: auto;
   height: 30px;
 }
-.figuras .figuras-card .figuras-card__button {
-  display: block;
-  width: 15rem;
-  height: 4rem;
-  background: #63948C;
-  border: none;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  cursor: pointer;
-  transform: scale(1);
-  transition-property: transform;
-  transition-duration: 2s;
-}
-.figuras .figuras-card .figuras-card__button:hover {
-  transform: scale(1.1);
-  transition-property: transform;
-  transition-duration: 2s;
-}
-.figuras .figuras-card .figuras-card__button--mod {
-  background-color: #C24332;
-}
 .figuras .figuras-card .figuras-card__resultado {
   width: 80%;
-  height: autou;
-  margin: auto;
-  font-size: 1.3rem;
-  font-weight: 600px;
-  text-transform: uppercase;
-  text-align: center;
+  height: 90px;
+  overflow-y: auto;
+  overflow-wrap: anywhere;
+  background: #4d4f65;
+  border-radius: 12px;
+  padding: 10px 0px;
+  display: grid;
+  place-items: center;
+}
+.figuras .figuras-card .figuras-card__resultado span {
+  font-weight: 900;
+  color: #63948C;
+}
+.figuras .figuras-card .figuras-card__resultado p {
+  width: 90%;
   color: #EBE6D1;
-  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700px;
+  text-transform: uppercase;
 }
 
 h3 {
   font-weight: 400;
   color: #fff;
   font-size: 1.6rem;
+}
+
+.seccion-descuento {
+  width: 100%;
+  height: auto;
+  padding: 20px 0px;
+}
+.seccion-descuento form {
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+  height: 32rem;
+  background: linear-gradient(235deg, #63948C, #4CA798);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.seccion-descuento form img {
+  position: absolute;
+  right: 0;
+  width: 7rem;
+  top: 0;
+}
+.seccion-descuento form .descuento-etiqueta-p {
+  position: absolute;
+  top: 30px;
+  right: 8px;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #4d4f65;
+  transform: rotate(60deg);
+}
+.seccion-descuento form .container-precio label, .seccion-descuento form .container-descuento label {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: #fff;
+}
+.seccion-descuento form .container-precio input, .seccion-descuento form .container-descuento input {
+  width: 200px;
+  height: 2.6rem;
+  border: none;
+  background: #4d4f65;
+  margin: 12px 0px;
+  color: #fff;
+  padding: 0px 10px;
+}
+.seccion-descuento form .container-precio input::placeholder, .seccion-descuento form .container-descuento input::placeholder {
+  color: #fff;
+  padding: 0px 10px;
+}
+.seccion-descuento form .contenedor-resultado-descuento {
+  width: 20rem;
+  height: 8rem;
+  background: #4d4f65;
+  padding: 0px 14px;
+}
+.seccion-descuento form .contenedor-resultado-descuento p {
+  font-size: 1.4rem;
+  color: #EBE6D1;
+  font-weight: 300;
+}
+.seccion-descuento form .contenedor-resultado-descuento span {
+  color: #EBE6D1;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 /* media queries */
@@ -145,7 +207,7 @@ h3 {
     width: 90%;
     max-width: 1200px;
     margin: auto;
-    height: 54rem;
+    height: auto;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
   .figuras .container-inputs {

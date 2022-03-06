@@ -8,12 +8,12 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-	<title>Figuras geometricas</title>
+	<title>Mini asistente matematico | para tereas especificas</title>
 </head>
 <body>
 	<header>
 		<img src="./assets/logo.svg" alt="">
-		<h1>Figuras geométricas</h1>
+		<h1>MR. matematico</h1>
 	</header>
 	<h2 class="sub-titulo">Calcular el área,perímetro o altura de un:</h2>
 	<section class="figuras">
@@ -22,50 +22,73 @@
 			<img src="./assets/triangulo-guia.svg" alt="">
 			<label for="triangulo-lado1">Escribe el:</label>
 			<div class="container-inputs">
-				<input id="triangulo-lado1" type="number" placeholder="lado 1">
-				<input id="triangulo-lado2" type="number" placeholder="lado 2">
-				<input id="triangulo-base" type="number" placeholder="base">
-				<input id="triangulo-altura" type="number" placeholder="altura">
+				<input oninput="obtenerDatosTriangulo()" id="triangulo-lado1" type="number" placeholder="lado 1">
+				<input oninput="obtenerDatosTriangulo()" id="triangulo-lado2" type="number" placeholder="lado 2">
+				<input oninput="obtenerDatosTriangulo()" id="triangulo-base" type="number" placeholder="base">
+				<input oninput="obtenerDatosTriangulo()" id="triangulo-altura" type="number" placeholder="altura">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroTriangulo()">Hallar perímetro</button>
-			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerAreaTriangulo()">Hallar área</button>
-			<p id="resultado-p-triangulo" class="figuras-card__resultado">perímetro: ... area: .....</p>
+			<div class="figuras-card__resultado">
+				<p id="resultado-p-triangulo" ><span>Resultado:</span></p>
+			</div>
 		</form>
 		<form action="" class="figuras-card">
 			<h3>circulo</h3>
-			<img class="otras-figuras" src="./assets/circulo.png" alt="">
+			<img class="otras-figuras" src="./assets/circulo.svg" alt="">
 			<label for="radio-circulo">Escribe el:</label>
 			<div class="container-inputs">
-				<input class="input-one" id="radio-circulo" type="number" placeholder="Radio">
+				<input oninput="ObtenerDatosCirculo()" class="input-one" id="radio-circulo" type="number" placeholder="Radio">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="ObtenerPerimetroCirculo()">Hallar perímetro</button>
-			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerArea()">Hallar área</button>
-			<p id="resultado-p-circulo" class="figuras-card__resultado">perímetro: ... area: .....</p>
+			<!-- <button type="button" class="figuras-card__button" onclick="ObtenerPerimetroCirculo()">Hallar perímetro</button>
+			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerArea()">Hallar área</button> -->
+			<div class="figuras-card__resultado">
+				<p id="resultado-p-circulo"><span>resultado</span></p>
+			</div>
 		</form>
 		<form action="" class="figuras-card">
 			<h3>cuadrado</h3>
-			<img class="otras-figuras" src="./assets/cuadrado.png" alt="">
+			<img class="otras-figuras" src="./assets/cuadrado.svg" alt="">
 			<label for="radio-cuadrado">Escribe el:</label>
 			<div class="container-inputs">
-				<input class="input-one" id="radio-cuadrado" type="number" placeholder="Radio">
+				<input oninput="obtenerDatosCuadrado()" class="input-one" id="radio-cuadrado" type="number" placeholder="Lado">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="obtenerPerimetroCuadrado()">Hallar perímetro</button>
-			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerAreaCuadrado()">Hallar área</button>
-			<p id="resultado-p-cuadrado" class="figuras-card__resultado">perímetro: ... area: .....</p>
+			<div class="figuras-card__resultado">
+				<p id="resultado-p-cuadrado" ><span>Resultado:</span></p>
+			</div>
 		</form>
 		<form action="" class="figuras-card">
 			<h3>Triángulo Isósceles</h3>
-			<img src="./assets/isoceles-guia.svg" alt="">
+			<img class="isosceles" src="./assets/isosceles-guia.svg" alt="">
 			<label for="isoceles-lado1">Escribe el:</label>
 			<div class="container-inputs">
-				<input id="isoceles-lado1" type="number" placeholder="lado 1">
-				<input id="isoceles-lado2" type="number" placeholder="lado 2">
-				<input id="isoceles-base" type="number" placeholder="base">
+				<input oninput="obtenerDatosIsosceles()" id="isoceles-lado1" type="number" placeholder="lado 1">
+				<input oninput="obtenerDatosIsosceles()" id="isoceles-lado2" type="number" placeholder="lado 2">
+				<input oninput="obtenerDatosIsosceles()" id="isoceles-base" type="number" placeholder="base">
 			</div>
-			<button type="button" class="figuras-card__button" onclick="obtenerAlturaIsoceles()">Hallar altura</button>
-			<p id="resultado-p-isoceles" class="figuras-card__resultado">perímetro: ... area: .....</p>
+			<div class="figuras-card__resultado">
+				<p id="resultado-p-isoceles"><span>resultado:</span></p>
+			</div>
+
+		</form>
+	</section>
+	<h2 class="sub-titulo">Calcular descuento a un precio</h2>
+	<section class="seccion-descuento">
+		<form action="">
+			<img class="descuento-etiqueta" src="./assets/vector-descuento.svg" alt="">
+			<p class=descuento-etiqueta-p><span id="resultado-etiqueta-p">0</span>%</p>
+			<div class="container-precio">
+				<label for="precio">precio</label>
+				<input placeholder="ingresa un valor" oninput="calcularDescuento()" id="precio" type="number">
+			</div>
+			<div class="container-descuento">
+				<label for="descuento">descuento</label>
+				<input placeholder="ingresa otro valor" oninput="calcularDescuento()" id="descuento" type="number">
+			</div>
+			<div class="contenedor-resultado-descuento">
+				<p >Precio con descuento:<br>$<span id="resultado-descuento">0</span></p>
+			</div>
 		</form>
 	</section>
 	<script src="./figuras.js"></script>
+	<script src="./descuentos.js"></script>
 </body>
 </html>
