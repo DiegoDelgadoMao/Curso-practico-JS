@@ -1,0 +1,21 @@
+$color-principal: #2E303F;
+$color-secundario:#63948C;
+$color-tercero: #C24332;
+$color-cuarto:#EBE6D1;
+$primario-claro: #4D4F65;
+$gradiente-principal: linear-gradient(225deg, #2E303F , #3C468B);
+$gradiente-secundario: linear-gradient(225deg, #63948C  , #4CA798 );
+$gradiente-tercero: linear-gradient(225deg, #C24332 , #F34B35 );
+$sombra-cards: 2px 2px 14px #00000063;
+*,*::after,*::before{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	font-family: 'Cairo', sans-serif;
+	background-color: $color-principal;
+}

@@ -13,3 +13,10 @@
 - implementar las formulas a js
 - crear funciones
 - integrar js con html
+
+## taller #3: promedio, media y moda
+
+- definir formulas
+- implementar las formulas a js
+- crear funciones
+- integrar js con html

@@ -4,10 +4,20 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./styles/style.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-DC691R2QYW"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-DC691R2QYW');
+	</script>
 	<title>Mini asistente matematico | para tereas especificas</title>
 </head>
 <body>
@@ -38,8 +48,6 @@
 			<div class="container-inputs">
 				<input oninput="ObtenerDatosCirculo()" class="input-one" id="radio-circulo" type="number" placeholder="Radio">
 			</div>
-			<!-- <button type="button" class="figuras-card__button" onclick="ObtenerPerimetroCirculo()">Hallar perímetro</button>
-			<button type="button" class="figuras-card__button figuras-card__button--mod" onclick="obtenerArea()">Hallar área</button> -->
 			<div class="figuras-card__resultado">
 				<p id="resultado-p-circulo"><span>resultado</span></p>
 			</div>
@@ -88,7 +96,61 @@
 			</div>
 		</form>
 	</section>
-	<script src="./figuras.js"></script>
-	<script src="./descuentos.js"></script>
+	<section class="promedio-moda-mediana">
+		<div class="container-calculos">
+			<h2 class="container-calculos__title">calcular media/promedio aritmético</h2>
+			<form action="">
+				<label class="container-calculos__info" for="promedio-dato">Escribe los datos separados por comas, y sin espacios</label>
+				<input oninput="obtenerPromedio()" placeholder="1,22,45,88,2" class="container-calculos__input" id="promedio-dato" type="text">
+				<div class="container-calculos__resultado">
+					<p>Resultado: <br>
+						<span id="imprimir-resultado-promedio"></span>
+					</p>
+				</div>
+			</form>
+		</div>
+		<div class="container-calculos">
+			<h2 class="container-calculos__title">calcular mediana aritmética</h2>
+			<form action="">
+				<label class="container-calculos__info" for="mediana-dato">Escribe los datos separados por comas, y sin espacios</label>
+				<input oninput="obtenerMediana()" placeholder="1,22,45,88,2" class="container-calculos__input" id="mediana-dato" type="text">
+				<div class="container-calculos__resultado">
+					<p>Resultado: <br>
+						<span id="imprimir-resultado-mediana"></span>
+					</p>
+				</div>
+			</form>
+		</div>
+		<div class="container-calculos">
+			<h2 class="container-calculos__title">calcular la moda</h2>
+			<form action="">
+				<label class="container-calculos__info" for="moda-dato">Escribe los datos separados por comas, y sin espacios</label>
+				<input oninput="obtenerModa()" placeholder="1,22,45,88,2" class="container-calculos__input" id="moda-dato" type="text">
+				<div class="container-calculos__resultado">
+					<p>Resultado: <br>
+						<span id="imprimir-resultado-moda"></span>
+					</p>
+				</div>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<div class="footer-p">
+			<i class='bx bxs-copyright'></i>
+			<p>Diego Mauricio Delgado</p>
+		</div>
+		<div class="footer-redes">
+			<a href="https://github.com/DiegoDelgadoMao" target="_blank">
+				<i class='bx bxl-github'></i>
+			</a>
+			<a href="https://www.instagram.com/diegomauricio.delgadoe/?hl=es-la" target="_blank">
+				<i class='bx bxl-instagram-alt' ></i>
+			</a>
+		</div>
+	</footer>
+	<script src="./scripts/figuras.js"></script>
+	<script src="./scripts/descuentos.js"></script>
+	<script src="./scripts/promedio-media-moda.js"></script>
+	<script src="./scripts/promedioPonderado.js"></script>
 </body>
 </html>
